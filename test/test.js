@@ -433,7 +433,7 @@ var testServerPrivateKeyEncryption = testFunc(function*(test) {
     serializedServerPublicKey);  
   
   // We go straight into the server db to ensure that the server private key
-  // could be decrypted with the recovery key and the auth token.
+  // could be decrypted with the wallet key.
   var rawWallet =
     yield serverdb.Wallet.find(
       {where: {serializedServerPublicKey: serializedServerPublicKey}});
@@ -445,11 +445,10 @@ var testServerPrivateKeyEncryption = testFunc(function*(test) {
   var serializedClientMainPublicKey =
     result.clientMainKey.getPub().serialize();
   var secretHash = yield client.getSecretHash(PASSWORD);
-  var encryptionKey = client.getEncryptionKey(secretHash);
   var walletKey =
-    client.getWalletKey(
+    Client.getWalletKey(
       serializedClientMainPublicKey,
-      encryptionKey);
+      secretHash);
 
   var serializedServerPrivateKey = sjcl.codec.utf8String.fromBits(
     btcutil.aesDecrypt(
@@ -916,16 +915,16 @@ var testBenchmarkAddressCreation = testFunc(function*(test) {
 
 
 var exports = {};
-exports.testPasswordLength = testPasswordLength;
-exports.testRegister = testRegister;
-exports.testLogin = testLogin;
-exports.testVerifyUserDataSignature = testVerifyUserDataSignature;
-exports.testCreateWallet = testCreateWallet;
-exports.testSetSignatureFailure = testSetSignatureFailure;
+//exports.testPasswordLength = testPasswordLength;
+//exports.testRegister = testRegister;
+//exports.testLogin = testLogin;
+//exports.testVerifyUserDataSignature = testVerifyUserDataSignature;
+//exports.testCreateWallet = testCreateWallet;
+//exports.testSetSignatureFailure = testSetSignatureFailure;
 exports.testServerPrivateKeyEncryption = testServerPrivateKeyEncryption;
-exports.testCreateWalletInvalidServerResponse = testCreateWalletInvalidServerResponse;
-exports.testCreateAddresses = testCreateAddresses;
-exports.testPostTransaction = testPostTransaction;
+// exports.testCreateWalletInvalidServerResponse = testCreateWalletInvalidServerResponse;
+// exports.testCreateAddresses = testCreateAddresses;
+// exports.testPostTransaction = testPostTransaction;
 
 exports.setUp = setUp;
 exports.tearDown = tearDown;
