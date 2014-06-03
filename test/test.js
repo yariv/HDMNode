@@ -915,16 +915,16 @@ var testBenchmarkAddressCreation = testFunc(function*(test) {
 
 
 var exports = {};
-//exports.testPasswordLength = testPasswordLength;
-//exports.testRegister = testRegister;
-//exports.testLogin = testLogin;
-//exports.testVerifyUserDataSignature = testVerifyUserDataSignature;
+exports.testPasswordLength = testPasswordLength;
+exports.testRegister = testRegister;
+exports.testLogin = testLogin;
+exports.testVerifyUserDataSignature = testVerifyUserDataSignature;
 //exports.testCreateWallet = testCreateWallet;
 //exports.testSetSignatureFailure = testSetSignatureFailure;
 exports.testServerPrivateKeyEncryption = testServerPrivateKeyEncryption;
-// exports.testCreateWalletInvalidServerResponse = testCreateWalletInvalidServerResponse;
-// exports.testCreateAddresses = testCreateAddresses;
-// exports.testPostTransaction = testPostTransaction;
+exports.testCreateWalletInvalidServerResponse = testCreateWalletInvalidServerResponse;
+exports.testCreateAddresses = testCreateAddresses;
+exports.testPostTransaction = testPostTransaction;
 
 exports.setUp = setUp;
 exports.tearDown = tearDown;
