@@ -1,0 +1,32 @@
+{
+	"name": "HDMNode",
+	"version": "0.1.0",
+	"description": "A sample backend and API client for a Bitcoin HDM wallet",
+	"keywords": "Bitcoin, HDM, wallet",
+	"homepage": "https://github.com/yariv/HDMNode",
+	"license": "MIT",
+	"author": "Yariv Sadan <yarivsblog@gmail.com> (http://www.yarivsblog.com/)",
+	"repository" :
+		{
+			"type": "git",
+  		"url": "https://github.com/yariv/HDMNode.git"
+  	},
+	"dependencies": {
+		"js-scrypt": "0.2.x",
+		"jsonschema": "0.4.0",
+		"promise": "5.0.x",
+		"sequelize": "1.7.5",
+		"sjcl": "1.0.x",
+		"suspend": "0.5.x",
+		"underscore": "1.6.x",
+		"mysql": "2.3.x",
+		"jsonrpc2": "git://github.com/yariv/node-jsonrpc2",
+		"bitcoinjs-lib": "git://github.com/vbuterin/bitcoinjs-lib"
+	},
+	"devDependencies": {
+		"nodeunit": "0.9.x"
+	},
+	"scripts": {
+    "prepublish": "cd node_modules/sjcl && ./configure --with-all && make"
+	}
+}
