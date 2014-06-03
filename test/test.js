@@ -366,8 +366,7 @@ var testCreateWallet = testFunc(function*(test) {
     info.id +
     info.serializedClientMainPublicKey +
     info.serializedClientBackupPublicKey +
-    info.serializedServerPublicKey +
-    JSON.stringify(userData.encryptedClientMainKey);
+    info.serializedServerPublicKey;
 
   var signatureKey = client.session.signatureKey;
   var expectedSignature = btcutil.hmac256(
@@ -919,8 +918,8 @@ exports.testPasswordLength = testPasswordLength;
 exports.testRegister = testRegister;
 exports.testLogin = testLogin;
 exports.testVerifyUserDataSignature = testVerifyUserDataSignature;
-//exports.testCreateWallet = testCreateWallet;
-//exports.testSetSignatureFailure = testSetSignatureFailure;
+exports.testCreateWallet = testCreateWallet;
+exports.testSetSignatureFailure = testSetSignatureFailure;
 exports.testServerPrivateKeyEncryption = testServerPrivateKeyEncryption;
 exports.testCreateWalletInvalidServerResponse = testCreateWalletInvalidServerResponse;
 exports.testCreateAddresses = testCreateAddresses;
