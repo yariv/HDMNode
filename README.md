@@ -12,7 +12,7 @@ The hierarchical-deterministic property (based on [BIP32](https://github.com/bit
 
 HDM wallets borrow additional benefits from non-multisig HD wallets. They make backing up wallets easy because the wallet's seed contains all the information needed to restore the wallet. They also allow setting up an arbitrary tree of subwallets for groups/organizations, where users who have access to a specific branch can also access its sub-branches but not its parent or sibling branches.
 
-For more background, see the announcement at [link].
+For more background, see the full [announcement](http://yarivsblog.blogspot.com/2014/06/announcing-hdmnode-nodejs-based-hdm.html).
 
 Contributions will be welcome!
 
