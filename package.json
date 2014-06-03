@@ -28,5 +28,8 @@
 	},
 	"scripts": {
     "prepublish": "cd node_modules/sjcl && ./configure --with-all && make"
+	},
+	"engines": {
+		"node" : ">=0.11.0"
 	}
 }
