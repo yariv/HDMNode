@@ -15,7 +15,7 @@
 		"js-scrypt": "0.2.x",
 		"jsonschema": "0.4.0",
 		"promise": "5.0.x",
-		"sequelize": "1.7.5",
+		"sequelize": "1.7.4",
 		"sjcl": "1.0.x",
 		"suspend": "0.5.x",
 		"underscore": "1.6.x",
